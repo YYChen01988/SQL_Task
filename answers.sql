@@ -1,5 +1,6 @@
 -- 1. Return ALL the data in the 'movies' table.
 SELECT * FROM movies;
+
 -- 2. Return ONLY the name column from the 'people' table
 SELECT name FROM people;
 
@@ -20,9 +21,8 @@ INSERT INTO people (name) VALUES ('Alstair Kane');
 DELETE FROM people WHERE name = 'Ben Affleck';
 
 -- 8. The cinema has just heard that they will be holding an exclusive midnight showing of 'Captain Marvel'!! Create a new entry in the 'movies' table to reflect this.
-INSERT INTO movies (title) VALUES ('Captain Marvel');
+INSERT INTO movies (title, year, show_time) VALUES ('Captain Marvel', 2019, '00:00');
 
 -- 9. The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
 SELECT movies SET title = 'Guardians of the Galaxy';
 UPDATE movies SET show_time = '23:20' WHERE title = 'Guardians of the Galaxy 2';
-SELECT * FROM movies;
